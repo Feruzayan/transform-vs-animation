@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.button_container{
+    cursor: pointer;
+    padding: 10px 15px;
+    color: aliceblue;
+    background-color: brown;
+    border: transparent;
+    border-radius: 5px;
+    transition: all 0.4s linear;
+    animation-name: move_box;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    /* transform: translate(200px,100px); */
+}
+.button_container:hover{
+    background-color: rgb(34, 28, 28);
+    opacity: 0.9;
+    transform: scale(1.2,1.5) rotateZ(-10deg);
+    /* transform: skewX(30deg); */
+}
+.button_container:active{
+    background-color: yellow;
+}
+@keyframes move_box{
+    /* from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(1300px);
+    } */
+    0%{
+        transform: translate(0,0,0);
+    }
+    25%{
+        transform: translate(300px,0,300px) scale(1.5);
+    }
+    50%{
+        transform: translate(300px,300px) rotate(720deg);
+    }
+    75%{
+        transform: translate(0,300px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+.card{
+    display: flex;
+    justify-content: end;
+}
+.button_card{
+    cursor: pointer;
+    background-color: rgb(107, 107, 245);
+    color: aliceblue;
+    border: transparent;
+    border-radius: 5px;
+    padding: 20px 40px;
+    transform: translateX(-620px);
+}
+.button_card:hover{
+    border-radius: 40px;
+    background-color: rgb(88, 88, 241);
+    transition: all 1.3s linear;
+}
+.button_card:active{
+    background-color: rgb(241, 149, 149);
+}
+.grid_hover{
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.grid-box0{
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+}
+.grid-box{
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+}
+.card_box h1{
+    margin-top: 100px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 30px 40px;
+    background: linear-gradient(0.25turn, #f69d3c, #ebf8e1, #3f87a6)
+}
+.card_box h1:hover{
+    border-radius: 40px;
+    transition: all 1s linear;
+    background: linear-gradient(0.25turn, #5c90a7, #f5faf1, #faab57)
+}
+.card1_box h1:hover{
+    border-radius: 40px;
+    transition: all 1s linear;
+    background: linear-gradient(0.25turn, #f69d3c, #3f74a6, #66b12e)
+}
+.card1_box h1{
+    margin-top: 100px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 30px 105px;
+    background: linear-gradient(0.25turn, #66b12e, #f69d3c, #3f74a6)
+}
